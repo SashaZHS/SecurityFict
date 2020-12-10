@@ -3,12 +3,12 @@ import CasinoRoyale.algoritm_random as alg
 import random
 import sys
 
-
 user_id = random.randint(111, 9999999999)
 print('user_id = {}'.format(user_id))
 
 
 def task1(casino):
+    original_stdout = sys.stdout
     casino.create_user()
     print(casino)
     lcg = alg.Lcg()
@@ -22,25 +22,29 @@ def task1(casino):
             [casino.play(bet=1, number=1, print_data=False) for i in range(11)]
             continue
     lcg.state = casino.play(bet=1, number=1, print_data=False)
+    f = open('CasinoRoyale/result_task1.txt', 'w')
     print(casino.account)
     i = 0
-    print("GAME ON!!!!")
+    sys.stdout = f
+    print("TASK3!\nGAME ON!!!!")
     nxt = lcg.next()
     while 9 < int(casino.account['money']) < 1_000_000:
         last_money = int(casino.account['money'])
         i += 1
-        print(i)
+        print('step {}'.format(i))
         try:
             casino.play(bet=int(casino.account['money']) // 10, number=nxt, print_data=True)
             if last_money < casino.account['money']:
                 nxt = lcg.next()
         except:
             nxt = lcg.next()
-    if casino.account['money']>1_000_000:
-        print("☻♥♥You WIN♥♥☻")
+    if casino.account['money'] > 1_000_000:
+        print("!!!You WIN!!!")
     else:
-        print("♠♠♠You LOSE♠♠♠")
+        print("!!!You LOSE!!!")
     print("Your Money: {}".format(casino.account['money']))
+    f.close()
+    sys.stdout=original_stdout
 
 
 def start():
