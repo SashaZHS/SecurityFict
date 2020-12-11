@@ -34,7 +34,6 @@ def test_crack(model, casino, name):
     f.close()
     sys.stdout = original_stdout
 
-
 def task1(casino):
     casino.mode = Casino.Mode.lcg
     lcg = alg.Lcg()
@@ -49,6 +48,14 @@ def task1(casino):
             continue
     lcg.state = casino.play(bet=1, number=1, print_data=False)
     test_crack(lcg, casino, 'task1')
+    casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
+    
+    
+def task2(casino):
+    casino.mode = Casino.Mode.mt
+    mt = alg.Mt()
+    mt._crack(mt, casino.account['deletionTime'])
+    test_crack(mt, casino, 'task2')
     casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
 
