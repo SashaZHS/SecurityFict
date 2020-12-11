@@ -101,3 +101,8 @@ class Mt19937:
             if temp & 1 != 0:
                 self.states[i] ^= 0x9908b0df
         self.__index = 0
+
+
+class Mt(Mt19937):
+    def _crack(self, mt: Mt19937, seed):
+        mt.__init__(seed, self.n, self.m)
