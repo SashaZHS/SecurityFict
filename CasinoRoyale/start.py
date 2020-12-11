@@ -44,11 +44,11 @@ def task1(casino):
         print("!!!You LOSE!!!")
     print("Your Money: {}".format(casino.account['money']))
     f.close()
-    sys.stdout=original_stdout
+    sys.stdout = original_stdout
+
 
 def task2():
     pass
-
 
 
 def start():
