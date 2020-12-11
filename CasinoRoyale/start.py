@@ -52,7 +52,6 @@ def task1(casino):
     casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
 
-
 def start():
     print('Creating User')
     casino = Casino.Server(user_id, Casino.Mode.lcg)
