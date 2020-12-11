@@ -48,7 +48,7 @@ def task1(casino):
 
 
 def task2():
-    pass
+    print('I will only 4 houres sleep today. Now we are testing branches.')
 
 
 def start():
