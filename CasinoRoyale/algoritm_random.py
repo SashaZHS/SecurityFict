@@ -104,5 +104,6 @@ class Mt19937:
 
 
 class Mt(Mt19937):
-    def _crack(self, mt: Mt19937, seed):
-        mt.__init__(seed, self.n, self.m)
+    def _crack(self, mt: Mt19937, user_date):
+        user_date = user_date - dt.datetime.fromtimestamp(0, dt.timezone.utc)
+        mt.__init__(int(user_date.total_seconds()), self.n, self.m)
