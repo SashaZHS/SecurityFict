@@ -12,7 +12,7 @@ def create_user(casino):
     return casino
 
 
-def test_crack(model, casino, name, file = False):
+def test_crack(model, casino, name, file=False):
     original_stdout = sys.stdout
     f = open('CasinoRoyale/result_{}.txt'.format(name), 'w')
     print(casino.account)
@@ -25,10 +25,9 @@ def test_crack(model, casino, name, file = False):
             last_money = casino.account['money']
             try:
                 casino.play(bet=int(casino.account['money']) // 10, number=nxt, print_data=True)
-                if last_money<casino.account['money']:
+                if last_money < casino.account['money']:
                     nxt = model.next()
             except Exception as e:
-                print(e)
                 nxt = model.next()
     else:
         while 9 < int(casino.account['money']) < 1_000_000:
@@ -36,8 +35,7 @@ def test_crack(model, casino, name, file = False):
             try:
                 casino.play(bet=int(casino.account['money']) // 10, number=nxt, print_data=True)
             except Exception as e:
-                print(e)
-
+                break
     if casino.account['money'] > 1_000_000:
         print("!!!You WIN!!!")
     else:
@@ -53,17 +51,17 @@ def task1(casino):
     lcg.m = 2 ** 32
     while True:
         try:
-            print(lcg._crack(casino.history[-10:],count_of_parameters=2))
+            print(lcg._crack(casino.history[-10:], count_of_parameters=2))
             break
         except Exception as e:
             print(e)
             [casino.play(bet=1, number=1, print_data=False) for i in range(10)]
             continue
     lcg.state = casino.play(bet=1, number=1, print_data=False)
-    test_crack(lcg, casino, 'task1',True)
+    test_crack(lcg, casino, 'task1', True)
     casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
-    
+
 def task2(casino):
     casino.mode = Casino.Mode.mt
     mt = alg.Mt()

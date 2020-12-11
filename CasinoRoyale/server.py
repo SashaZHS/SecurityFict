@@ -44,7 +44,7 @@ class Server:
         try:
             res = rq.get(self.__play_link.format(self.mode, self.account['id'], bet, number)).json()
             if 'error' in res:
-                print('ERROR: '.format(res['error']))
+                print('ERROR: {}'.format(res['error']))
                 return
             self.history.append(int(res['realNumber']))
             self.account = res['account']
