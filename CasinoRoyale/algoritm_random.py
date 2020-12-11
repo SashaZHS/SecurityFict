@@ -15,7 +15,7 @@ def mod_inv(b, n):
     if g == 1:
         return x % n
 
-        
+
 def x32(x):
     return x & 0xffffffff
 
@@ -77,10 +77,11 @@ class Mt19937:
         self._create_states()
 
     def _create_states(self):
-        self.states[0] = self.__seed
+        self.states.append(self.__seed)
         while self.__index < self.n:
             temp = 0x6c078965 * (self.states[self.__index - 1] ^ (self.states[self.__index - 1] >> 30)) + self.__index
-            self.states[self.__index] = x32(temp)
+            self.states.append(x32(temp))
+            self.__index += 1
 
     def next(self):
         if self.__index >= self.n:
