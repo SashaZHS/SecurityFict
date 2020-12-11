@@ -46,8 +46,12 @@ def task1(casino):
     f.close()
     sys.stdout=original_stdout
 
-def task2():
-    print('I will only 4 houres sleep today. Now we are testing branches.')
+def task2(casino):
+    casino.mode = Casino.Mode.mt
+    mt = alg.Mt()
+    mt._crack(mt, casino.account['deletionTime'])
+    test_crack(mt, casino, 'task2')
+    casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
 
 
