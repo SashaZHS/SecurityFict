@@ -1,5 +1,7 @@
 from functools import reduce
 from math import gcd
+import datetime as dt
+from dateutil import parser as dt_parser
 
 def egcd(a, b):
     if a == 0:
@@ -112,5 +114,7 @@ class Mt19937:
 
 class Mt(Mt19937):
     def _crack(self, mt: Mt19937, user_date):
+        user_date = dt_parser.isoparse(user_date) - dt.timedelta(hours=1)
         user_date = user_date - dt.datetime.fromtimestamp(0, dt.timezone.utc)
-        mt.__init__(int(user_date.total_seconds()), self.n, self.m)
+        user_date = int(user_date.total_seconds())
+        mt.__init__(user_date, self.n, self.m)
