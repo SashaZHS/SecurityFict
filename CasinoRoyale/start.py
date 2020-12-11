@@ -46,6 +46,10 @@ def task1(casino):
     f.close()
     sys.stdout=original_stdout
 
+def task2():
+    pass
+
+
 
 def start():
     print('Creating User')
