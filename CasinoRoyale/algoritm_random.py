@@ -1,7 +1,6 @@
 from functools import reduce
 from math import gcd
 
-
 def egcd(a, b):
     if a == 0:
         return b, 0, 1
@@ -63,8 +62,16 @@ class Lcg:
         self.m = abs(reduce(gcd, zeroes))
         self._crack_unknown_multiplier(states)
         return "Found a, c, m"
-
-
+    
+    def _crack(self, states, count_of_parameters):
+        if count_of_parameters == 3:
+            return self._crack_unknown_modulus(states)
+        elif count_of_parameters == 2:
+            return self._crack_unknown_multiplier(states)
+        else:
+            return self._crack_unknown_increment(states)
+          
+          
 class Mt19937:
     def __init__(self, seed=1, n=624, m=397):
         self.n = n
