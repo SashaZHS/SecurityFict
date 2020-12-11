@@ -60,3 +60,10 @@ class Lcg:
         self._crack_unknown_multiplier(states)
         return "Found a, c, m"
 
+    def _crack(self, states, count_of_parameters):
+        if count_of_parameters == 3:
+            return self._crack_unknown_modulus(states)
+        elif count_of_parameters == 2:
+            return self._crack_unknown_multiplier(states)
+        else:
+            return self._crack_unknown_increment(states)
