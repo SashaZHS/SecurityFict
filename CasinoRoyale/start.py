@@ -3,8 +3,7 @@ import CasinoRoyale.algoritm_random as alg
 import random
 import sys
 
-user_id = random.randint(111, 9999999999)
-print('user_id = {}'.format(user_id))
+
 
 
 def create_user(casino):
@@ -45,7 +44,10 @@ def test_crack(model, casino, name, file=False):
     sys.stdout = original_stdout
 
 
-def task1(casino):
+def task1(user_id):
+    print('Creating User {}'.format(user_id))
+    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = create_user(casino)
     casino.mode = Casino.Mode.lcg
     lcg = alg.Lcg()
     lcg.m = 2 ** 32
@@ -59,21 +61,19 @@ def task1(casino):
             continue
     lcg.state = casino.play(bet=1, number=1, print_data=False)
     test_crack(lcg, casino, 'task1', True)
-    casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
 
-def task2(casino):
+def task2(user_id):
+    print('Creating User {}'.format(user_id))
+    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = create_user(casino)
     casino.mode = Casino.Mode.mt
     mt = alg.Mt()
     mt._crack(mt, casino.account['deletionTime'])
     test_crack(mt, casino, 'task2', True)
-    casino.play(bet=casino.account['money'] - 1000, number=1, print_data=False)
 
 
 def start():
-    print('Creating User')
-    casino = Casino.Server(user_id, Casino.Mode.lcg)
-    casino = create_user(casino)
     # print(casino)
-    task1(casino)
-    task2(casino)
+    task1(random.randint(111, 9999999999))
+    task2(random.randint(111, 9999999999))
