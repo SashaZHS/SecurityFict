@@ -1,10 +1,10 @@
 TASK3!
 GAME ON!!!!
 Yay!! Your balance: 37339;
-                         Your Number = 793122861;
-                         Real Number = 793122861;
+                         Your Number = 1897206572;
+                         Real Number = 1897206572;
 Yay!! Your balance: 3766606;
-                         Your Number = 2940195717;
-                         Real Number = 2940195717;
+                         Your Number = 2031717446;
+                         Real Number = 2031717446;
 !!!You WIN!!!
 Your Money: 3766606

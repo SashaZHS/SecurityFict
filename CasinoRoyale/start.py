@@ -45,7 +45,7 @@ def test_crack(model, casino, name, file=False):
 
 def task1(user_id):
     print('Creating User {}'.format(user_id))
-    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = Casino.Server(user_id)
     casino = create_user(casino)
     casino.mode = Casino.Mode.lcg
     lcg = alg.Lcg()
@@ -64,7 +64,7 @@ def task1(user_id):
 
 def task2(user_id):
     print('Creating User {}'.format(user_id))
-    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = Casino.Server(user_id)
     casino = create_user(casino)
     casino.mode = Casino.Mode.mt
     mt = alg.Mt()
@@ -74,7 +74,7 @@ def task2(user_id):
 
 def task3(user_id):
     print('Creating User {}'.format(user_id))
-    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = Casino.Server(user_id)
     casino = create_user(casino)
     casino.mode = Casino.Mode.better_mt
     states = [casino.play(1, i, False) for i in range(624)]
