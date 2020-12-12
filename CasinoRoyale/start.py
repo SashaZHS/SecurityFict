@@ -42,6 +42,7 @@ def test_crack(model, casino, name, file=False):
     print("Your Money: {}".format(casino.account['money']))
     f.close()
     sys.stdout = original_stdout
+    print(casino.account)
 
 
 def task1(user_id):

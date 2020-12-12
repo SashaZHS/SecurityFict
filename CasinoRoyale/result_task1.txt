@@ -1,26 +1,22 @@
 TASK1!
 GAME ON!!!!
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 98891;
+                         Your Number = 205096682;
+                         Real Number = 205096682;
 No valid input data
 No valid input data
 No valid input data
-No valid input data
-You lost this time! Your balance: 891;
-                         Your Number = 1881129093;
-                         Real Number = -2020685375;
-You lost this time! Your balance: 802;
-                         Your Number = 1881129093;
-                         Real Number = -1226106836;
-You lost this time! Your balance: 722;
-                         Your Number = 1881129093;
-                         Real Number = -1907575397;
-You lost this time! Your balance: 650;
-                         Your Number = 1881129093;
-                         Real Number = -1026363842;
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 65585;
-                         Your Number = 1881129093;
-                         Real Number = 1881129093;
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 6617027;
-                         Your Number = 1639823392;
-                         Real Number = 1639823392;
+You lost this time! Your balance: 89002;
+                         Your Number = 2128995262;
+                         Real Number = -201979583;
+You lost this time! Your balance: 80102;
+                         Your Number = 2128995262;
+                         Real Number = -1896459860;
+You lost this time! Your balance: 72092;
+                         Your Number = 2128995262;
+                         Real Number = -1656250085;
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 7273883;
+                         Your Number = 2128995262;
+                         Real Number = 2128995262;
 !!!You WIN!!!
-Your Money: 6617027
+Your Money: 7273883

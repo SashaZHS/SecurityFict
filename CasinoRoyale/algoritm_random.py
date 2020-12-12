@@ -114,11 +114,7 @@ class Mt19937:
 
 class Mt(Mt19937):
     def _crack(self, mt: Mt19937, user_date):
-        print(user_date)
         user_date = dt_parser.isoparse(user_date) - dt.timedelta(hours=1)
-        print(user_date)
         user_date = user_date - dt.datetime.fromtimestamp(0, dt.timezone.utc)
-        print(user_date)
         user_date = int(user_date.total_seconds())
-        print(user_date)
         mt.__init__(user_date, self.n, self.m)
