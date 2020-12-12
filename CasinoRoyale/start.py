@@ -4,8 +4,6 @@ import random
 import sys
 
 
-
-
 def create_user(casino):
     casino.create_user()
     return casino
@@ -42,6 +40,7 @@ def test_crack(model, casino, name, file=False):
     print("Your Money: {}".format(casino.account['money']))
     f.close()
     sys.stdout = original_stdout
+    print(casino.account)
 
 
 def task1(user_id):
@@ -73,7 +72,19 @@ def task2(user_id):
     test_crack(mt, casino, 'task2', True)
 
 
+def task3(user_id):
+    print('Creating User {}'.format(user_id))
+    casino = Casino.Server(user_id, Casino.Mode.lcg)
+    casino = create_user(casino)
+    casino.mode = Casino.Mode.better_mt
+    states = [casino.play(1, i, False) for i in range(624)]
+    better_mt = alg.BetterMt()
+    better_mt._crack(states)
+    test_crack(better_mt, casino, 'task3', file=True)
+
+
 def start():
     # print(casino)
     task1(random.randint(111, 9999999999))
     task2(random.randint(111, 9999999999))
+    task3(random.randint(111, 9999999999))

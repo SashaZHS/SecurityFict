@@ -1,26 +1,10 @@
 TASK1!
 GAME ON!!!!
-No valid input data
-No valid input data
-No valid input data
-No valid input data
-You lost this time! Your balance: 891;
-                         Your Number = 1881129093;
-                         Real Number = -2020685375;
-You lost this time! Your balance: 802;
-                         Your Number = 1881129093;
-                         Real Number = -1226106836;
-You lost this time! Your balance: 722;
-                         Your Number = 1881129093;
-                         Real Number = -1907575397;
-You lost this time! Your balance: 650;
-                         Your Number = 1881129093;
-                         Real Number = -1026363842;
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 65585;
-                         Your Number = 1881129093;
-                         Real Number = 1881129093;
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 6617027;
-                         Your Number = 1639823392;
-                         Real Number = 1639823392;
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 97882;
+                         Your Number = 301618014;
+                         Real Number = 301618014;
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 9876094;
+                         Your Number = 126526245;
+                         Real Number = 126526245;
 !!!You WIN!!!
-Your Money: 6617027
+Your Money: 9876094

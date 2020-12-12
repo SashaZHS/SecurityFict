@@ -3,6 +3,7 @@ from math import gcd
 import datetime as dt
 from dateutil import parser as dt_parser
 
+
 def egcd(a, b):
     if a == 0:
         return b, 0, 1
@@ -64,7 +65,7 @@ class Lcg:
         self.m = abs(reduce(gcd, zeroes))
         self._crack_unknown_multiplier(states)
         return "Found a, c, m"
-    
+
     def _crack(self, states, count_of_parameters):
         if count_of_parameters == 3:
             return self._crack_unknown_modulus(states)
@@ -72,8 +73,8 @@ class Lcg:
             return self._crack_unknown_multiplier(states)
         else:
             return self._crack_unknown_increment(states)
-          
-          
+
+
 class Mt19937:
     def __init__(self, seed=1, n=624, m=397):
         self.n = n
@@ -114,11 +115,36 @@ class Mt19937:
 
 class Mt(Mt19937):
     def _crack(self, mt: Mt19937, user_date):
-        print(user_date)
         user_date = dt_parser.isoparse(user_date) - dt.timedelta(hours=1)
-        print(user_date)
         user_date = user_date - dt.datetime.fromtimestamp(0, dt.timezone.utc)
-        print(user_date)
         user_date = int(user_date.total_seconds())
-        print(user_date)
         mt.__init__(user_date, self.n, self.m)
+
+
+def un_shift_left(inp, n, bitmask):
+    res = inp
+    for i in range(32):
+        res = inp ^ (res << n & bitmask)
+    return res
+
+
+def un_shift_right(inp, n):
+    res = inp
+    for i in range(32):
+        res = inp ^ res >> n
+    return res
+
+
+def un_step(n):
+    res = n
+    res = un_shift_right(res, 18)
+    res = un_shift_left(res, 15, 0xefc60000)
+    res = un_shift_left(res, 7, 0x9d2c5680)
+    res = un_shift_right(res, 11)
+    return res
+
+
+class BetterMt(Mt19937):
+    def _crack(self, states):
+        self.states = list(map(un_step, states))
+        self.__index = 0
