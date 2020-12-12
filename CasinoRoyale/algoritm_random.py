@@ -2,6 +2,7 @@ from functools import reduce
 from math import gcd
 import datetime as dt
 from dateutil import parser as dt_parser
+# from egcd import egcd
 
 
 def egcd(a, b):
@@ -35,11 +36,11 @@ class Lcg:
         if self.a is None:
             print('unknown a')
             fg = False
-        if self.a is None:
-            print('unknown b')
-            fg = False
-        if self.a is None:
+        if self.c is None:
             print('unknown c')
+            fg = False
+        if self.m is None:
+            print('unknown m')
             fg = False
         if fg:
             self.state = (self.state * self.a + self.c) % self.m

@@ -1,10 +1,14 @@
 TASK1!
 GAME ON!!!!
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 97882;
-                         Your Number = 301618014;
-                         Real Number = 301618014;
-Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 9876094;
-                         Your Number = 126526245;
-                         Real Number = 126526245;
+No valid input data
+You lost this time! Your balance: 882;
+                         Your Number = 1242265883;
+                         Real Number = -739538516;
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 88794;
+                         Your Number = 1242265883;
+                         Real Number = 1242265883;
+Yay! https://docs.google.com/document/d/1E_ltXUqvmmWeb3Dl3Qsyexsy5V7M6Lb1kvkXiXz9sks/edit?usp=sharing https://docs.google.com/document/d/1qsNXIqxQEs4Xbz5ye6z0ttrct1qn7zos4Vwl7PzcEK0/edit?usp=sharing! Your balance: 8958915;
+                         Your Number = 1692916670;
+                         Real Number = 1692916670;
 !!!You WIN!!!
-Your Money: 9876094
+Your Money: 8958915
