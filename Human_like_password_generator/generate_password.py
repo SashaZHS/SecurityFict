@@ -1,6 +1,8 @@
 import random as rnd
 import string
+from functools import partial
 import json
+import pandas as pd
 
 symbols = '@-_.'
 
@@ -31,8 +33,24 @@ def random_human_like_password(min_len=8, max_len=20):
     return password
 
 
+def random_top_password(df, name):
+    return rnd.choice(df[name])
 
 
 def generate_password():
+    top100 = pd.read_csv('Human_like_password_generator/data/top100.csv')
+    top_milion = pd.read_csv('Human_like_password_generator/data/top_million.csv')
     while True:
-        yield random_human_like_password()
+        # yield rnd.choices((
+        #     partial(random_password, rnd.randint(8, 20)),
+        #     partial(random_human_like_password),
+        #     partial(random_top_password, top100, 'password'),
+        #     partial(random_top_password, top_milion, 'password')),
+        #     (5, 25, 10, 60))[0]()
+
+        yield rnd.choices((
+            random_password(rnd.randint(8, 20)),
+            random_human_like_password(),
+            random_top_password( top100, 'password'),
+            random_top_password(top_milion, 'password'),
+        ), (5, 25, 10, 60))[0]
